@@ -1,0 +1,38 @@
+<html>
+<body>
+<script type="text/javascript">
+var i=0
+for (i = 0; i <= 10; i++)
+{
+	if (i==5) {break} 
+	document.write("The number is " + i)
+	document.write("<br>")
+}
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate"); // 7
+var pos = str.lastIndexOf("locate"); // 21
+var pos = str.indexOf("locate",15); // 21
+var pos = str.search("locate"); // 7
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7,13); // Banana
+var str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");
+</script>
+</table>
+<p>Explanation: The loop will break when i=5</p>
+</body></html>
+<br><br>
+
+<html>
+<body>
+<script type="text/javascript">
+var i=0
+for (i = 0; i <= 10; i++)
+{
+	if (i==5) {continue}
+	document.write("The number is " + i)
+	document.write("<br />")
+}
+</script></table>
+
+<p>Explanation: The loop will break the current loop and continue with the next value when i=5.</p>
