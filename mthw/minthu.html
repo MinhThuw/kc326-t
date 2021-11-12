@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin sinh viên</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="E:\github\kc326-t\stt.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script type="text/javascript">
+        function vedothi(){
+    new Chart(document.getElementById("line-chart"), {
+        type: 'line',
+        data: {
+            labels:[-5,-4,-3,-2,-1,0,1,2,3,4,5],
+            datasets: [{
+                data: [,,,-1,0,1,2,3,4,],
+                label: 'y=x+1',
+                borderColor: "GreenYellow",
+                fill: false
+            },
+            {
+                data: [,,,6,1.5,0,1.5,6,,,],
+                label: 'y=3x²/2',
+                borderColor: "SandyBrown",
+                fill: false
+            },{
+                data: [,,4,0,2,4,0,,,,],
+                label: "y=-x³-3x²+4",
+                borderColor: "azure",
+                fill: false
+            },{
+                data: [0,0,0,0,0,0,0,0,0,0,0],
+                label: 'Trục Ox',
+                borderColor: "yellow",
+                fill: false
+            }]
+        },
+        options: {
+            title: {
+              display: true,
+              text: 'Đồ thị của một số hàm số thông dụng'
+            }
+        }
+    });
+}
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="user">
+        <img src="E:\github\kc326-t\mthw12.jpg" alt="">
+        <h3 class="name">Minh Thư</h3>
+        <h3 class="name"><i class="fas fa-barcode"></i> MSSV: B1906004</h3>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="https://www.ctu.edu.vn/"><img src="E:\github\kc326-t\45.png"></a></li>
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#me">Bản thân</a></li>
+            <li><a href="https://minhthuw.github.io/kc326-t/bahai6">KC326</a></li>
+            <li><a href="#pt">Phương trình</a></li>
+            <li><a href="#dt">Đồ thị</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<div class="container">
+
+    <section class="home" id="home">
+        <h3>Xin Chào!!!</h3>
+        <h3 class="name">Mình tên là <span>Minh Thư</span></h3>
+        <br>
+         <div class="share">
+            <a href="https://www.facebook.com/thu.sua.39" class="fab fa-facebook-f"></a>
+            <a href="https://www.instagram.com/minhthuu_1204/" class="fab fa-instagram"></a>
+        </div>
+    </section>
+
+    <section class="me" id="me">
+        <h1 class="heading">Thông tin sinh viên</h1>
+        <div class="content">
+            <h3 class="name">Họ và tên: <span>Trương Thị Minh Thư</span></h3>
+            <br>
+            <p><i class="far fa-calendar-alt"></i> Ngày sinh: 12/4/2001</p>
+            <br>
+            <p><i class="fas fa-barcode"></i> MSSV: B1906004</p>
+             <br>
+            <p><i class="fas fa-venus-mars"></i> Giới tính: Nữ</p>
+             <br>
+            <p><i class="fas fa-school"></i> Trường: Đại học Cần Thơ - Khoa Công nghệ</p>
+             <br>
+            <p><i class="fas fa-flask"></i> Ngành: Quản lý công nghiệp</p>
+            <p><i class="fas fa-user-friends"></i> Lớp: TN1983A4 - Khóa 45</p>
+             <br>
+            <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: Bình Minh-Vĩnh Long</p>
+            <p><i class="fas fa-phone"></i> Số điện thoại: 0782801678</p>
+             <br>
+            <p><i class="fas fa-paper-plane"></i> Email: thub1906004@student.ctu.edu.vn</p>
+            <p><img src="E:\github\kc326-t\45.png"></i> Website: https://www.ctu.edu.vn/</p>
+            </div>
+        </section>
+    <section class="pt" id="pt">
+        <h1 class="heading">Phương trình bậc hai</h1>
+        <div class="content">
+            <h3 class="name"><span>phương trình bậc hai là phương trình có dạng: ax^(2)+bx+c=0.</span></h3>
+            <br><br>
+        <form action="">
+           <i class="fas fa-font"></i><input type="hsa" placeholder="Hệ số a" class="box" id="a">
+            <i class="fas fa-bold"></i><input type="hsb" placeholder="Hệ số b" class="box" id="b"> 
+            <i class="fas fa-copyright"></i><input type="hsc" placeholder="Hệ số c" class="box" id="c">
+        <input type="submit" value="Giải" onclick="Giaipt()">
+        <span id="result">Kết quả: </span><br/>
+        <span id="resultx1">x1=</span> ;
+        <span id="resultx2">x2=</span>
+        </form>
+    </div>
+    </section>
+    <script>
+        function Giaipt(){
+        var a = eval(document.getElementById("a").value);
+        var b = eval(document.getElementById("b").value);
+        var c = eval(document.getElementById("c").value);
+        var delta = b*b - (4 * a * c);
+        var kqua = ('</br>b)Phương trình bậc hai dạng ax^2 + bx + c = 0' 
+        + '<br/>' + 'Với a = ' + a + ', b = ' + b + ', c = ' + c)
+        if(delta == 0){
+            document.getElementById("result").innerHTML="<br/>Phương trình có nghiệm kép:";
+            document.getElementById("resultx1").innerHTML="x1= "+ -b / (2 * a);
+            document.getElementById("resultx2").innerHTML="x2= "+ -b / (2 * a);
+        }
+        else if(delta > 0){
+            document.getElementById("result").innerHTML="<br/>PT có 2 nghiệm phân biệt:";
+            document.getElementById("resultx1").innerHTML="x1= "+ ((-b - Math.sqrt(delta))/(2*a));
+            document.getElementById("resultx2").innerHTML="x2= "+ ((-b + Math.sqrt(delta))/(2*a));
+        }
+        else{
+            document.getElementById("result").innerHTML="<br/>Phương trình vô nghiệm:";
+        }
+    }
+    </script>
+
+
+    <section class="dt" id="dt">
+        <h1 class="heading">Vẽ đồ thị hàm số</h1>
+    <body onload='vedothi()'>
+    <div class='dothi'>
+        <canvas id="line-chart" height="350" width="450" ></canvas>
+    </div>
+    </section></div>
+    <div class="theme-toggler">
+        <span style="background: linear-gradient(deeppink, purple);"></span>
+        <span style="background: linear-gradient(lightgreen, DarkGoldenrod);"></span>
+        <span style="background: linear-gradient(blueviolet, deeppink);"></span>
+        <span style="background: linear-gradient(coral, DarkOrchid);"></span>
+        <span style="background: linear-gradient(#999, #111);"></span>
+    </div>
+    <script>
+
+    let themeColor = document.querySelectorAll('.theme-toggler span');
+    themeColor.forEach(color => color.addEventListener('click', () =>{
+        let background = color.style.background;
+        document.querySelector('body').style.background = background;
+    }));
+
+</script>
+</body>
+</html>
